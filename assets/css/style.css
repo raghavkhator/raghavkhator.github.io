@@ -144,10 +144,22 @@ header{
 .navbar-right{
 	position: absolute;
 	right:0px;
+	top:10px;
+	display: flex;
+	list-style: none;
 
 }
 
+.menu-toggler{
+	display: none;
+	background: none;
+	float: right;
+	cursor: pointer;
+}
 
+.nav-item-div{
+	float: right;
+}
 
 
 .services {
@@ -520,6 +532,10 @@ footer {
 	.pe-dj {
 		font-size: 6em;
 	}
+	.nav-item-div.active{
+		right:-5%;
+	}
+	
 
 }
 
@@ -531,6 +547,35 @@ footer {
 		background-attachment: fixed;
 		background-position: 50% -50px;
 	}
+
+
+	.menu-toggler{
+		color:#fff;
+		background-color: none;
+		border: none;
+		display: block;
+	}
+	.nav-item-div{
+		position: absolute;
+		width: 100%;
+		height: calc(100vh-50px);
+		background-color: grey;
+		top:100px;
+		right:-100%;
+		transition: 0.5s;
+
+	}
+	.nav-item-div.active{
+		right:-5%;
+	}
+
+	ul.navbar-right{
+		display: block;
+		text-align: center;
+		background-color: #1A1A1A;
+		background-size: cover;
+	}
+
 }
 
 @media all and (max-width: 768px) {
@@ -569,6 +614,9 @@ footer {
 	    top: 70%;
 	    left: 46%;
 	}
+	.nav-item-div.active{
+		right:-5%;
+	}
 }
 @media all and (max-width: 380px) {
 
@@ -595,6 +643,9 @@ footer {
 	    width: 30px;
 	    height: 30px;
 	}
+	.nav-item-div.active{
+		right:-5%;
+	}
 	
 }
 
@@ -603,6 +654,12 @@ footer {
 	.scrollDown {
 	    top: 70%;
 	    left: 44%;
+	}
+	.nav-item-div{
+		top:80px;
+	}
+	.nav-item-div.active{
+		right:-5%;
 	}
 }
 
@@ -707,4 +764,7 @@ img.skill-logo{
 }
 .no-border-div{
 	border: none;
+}
+button:focus{
+  outline: none !important
 }
